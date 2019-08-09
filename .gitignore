@@ -1,3 +1,4 @@
+*.swp
 
 ###> symfony/framework-bundle ###
 /.env.local
