@@ -3,13 +3,53 @@
 
 This is a PHP console application that demonstrates the Hexagonal architecture.
 
-# ARCHITECTURE
+# TECHNICAL SPECIFICATIONS
 -------------------------------------------------------------------------------
 
 - PHP 7.0.33-0+deb9u3 (cli) (built: Mar  8 2019 10:01:24) ( NTS )
 - Debian operating system
 - Symfony, for PHP framework and testing framework
 - Composer, for PHP package management
+
+
+# TESTING
+-------------------------------------------------------------------------------
+
+
+
+# HOW TO BUILD
+-------------------------------------------------------------------------------
+
+Download project:
+
+https://github.com/paperduck/sn
+
+If you have PHP and Composer installed, you should be able to run it:
+
+https://symfony.com/doc/current/deployment.html
+
+# HOW TO USE
+-------------------------------------------------------------------------------
+
+```
+$ cd hex_pet_shop
+$ php main.php
+```
+
+You will be prompted for commands. You can type 'help' to see a list of
+options.
+
+# REFERENCES
+-------------------------------------------------------------------------------
+
+### URLs
+
+PHP flat file database to store data with JSON: 
+https://github.com/Greg0/Lazer-Database
+
+Epoch Converter: 
+https://www.epochconverter.com/
+
 
 # DB schema
 -------------------------------------------------------------------------------
@@ -79,42 +119,8 @@ last-notified-pets-going-to-vet
 ```
 
 
-# TESTING
--------------------------------------------------------------------------------
+# SCREENSHOT
 
-
-
-# HOW TO BUILD
--------------------------------------------------------------------------------
-
-Download project:
-
-https://github.com/paperduck/sn
-
-If you have PHP and Composer installed, you should be able to run it:
-
-https://symfony.com/doc/current/deployment.html
-
-# HOW TO USE
--------------------------------------------------------------------------------
-
-```
-$ cd hex_pet_shop
-$ php main.php
-```
-
-You will be prompted for commands. You can type 'help' to see a list of
-options.
-
-# REFERENCES
--------------------------------------------------------------------------------
-
-### URLs
-
-PHP flat file database to store data with JSON: 
-https://github.com/Greg0/Lazer-Database
-
-Epoch Converter: 
-https://www.epochconverter.com/
+![screenshot](hex_screenshot.png)
 
 
