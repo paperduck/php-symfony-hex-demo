@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f074861ca1b434d77d805ea15fd25790",
+    "content-hash": "026f07632c4bfde8735167fa85797957",
     "packages": [
+        {
+            "name": "greg0/lazer-database",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Greg0/Lazer-Database.git",
+                "reference": "e3d9a1bc7fc8aa789b512f7f8417a6cea6672c25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Greg0/Lazer-Database/zipball/e3d9a1bc7fc8aa789b512f7f8417a6cea6672c25",
+                "reference": "e3d9a1bc7fc8aa789b512f7f8417a6cea6672c25",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1.6",
+                "phpunit/phpunit": "^5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lazer\\": "src/",
+                    "Lazer\\Test\\": "tests/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grzegorz Kuźnik",
+                    "role": "Owner",
+                    "email": "gerg0sz92@gmail.com"
+                }
+            ],
+            "description": "PHP library to use JSON files like flat-file database",
+            "homepage": "https://github.com/Greg0/Lazer-Database",
+            "keywords": [
+                "Simple",
+                "database",
+                "db",
+                "file",
+                "flat",
+                "json",
+                "lazer"
+            ],
+            "time": "2018-11-10T14:52:21+00:00"
+        },
         {
             "name": "psr/cache",
             "version": "1.0.1",

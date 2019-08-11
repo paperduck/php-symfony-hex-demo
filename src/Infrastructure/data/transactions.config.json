@@ -1,0 +1,1 @@
+{"last_id":6,"schema":{"id":"integer","customer_id":"integer","inventory_id":"integer","t_type":"string","timestamp":"string","amount":"integer","insured":"boolean","insured_days":"integer"},"relations":{}}

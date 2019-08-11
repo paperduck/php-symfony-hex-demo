@@ -9,6 +9,7 @@
         "php": "^7.0.8",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "greg0/lazer-database": "^1.1",
         "symfony/console": "3.4.*",
         "symfony/dotenv": "3.4.*",
         "symfony/flex": "^1.3.1",
@@ -25,7 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Command\\": "src/Command/"
+            "App\\":                "src/"
+            ,"Client\\":            "src/Client"
+            ,"Infrastructure\\":    "src/Infrastructure"
+            ,"Application\\":       "src/Application"
+            ,"Domain\\":            "src/Domain"
+            ,"Lazer\\":             "vendor/greg0/lazer-database/src"
         }
     },
     "autoload-dev": {

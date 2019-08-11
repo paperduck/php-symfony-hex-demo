@@ -18,7 +18,7 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/*'
-        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php,Application,Client,Domain,Infrastructure}'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
@@ -29,8 +29,8 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    # https://www.tomasvotruba.cz/blog/2018/05/28/build-your-first-symfony-console-application-with-dependency-injection-under-4-files/
-    Symfony\Component\Console\Application:
-        # why public? so we can get it from container in bin file
-        # via "$container->get(Application::class)"
-        public: true
+#    # https://www.tomasvotruba.cz/blog/2018/05/28/build-your-first-symfony-console-application-with-dependency-injection-under-4-files/
+#    Symfony\Component\Console\Application:
+#        # why public? so we can get it from container in bin file
+#        # via "$container->get(Application::class)"
+#        public: true

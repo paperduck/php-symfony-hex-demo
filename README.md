@@ -1,61 +1,120 @@
-
-ARCHITECTURE
--------------------------------------------------------------------------------
-Symfony for testing framework
-Composer for PHP package management
-
-LAYERS
+# WHAT IS THIS?
 -------------------------------------------------------------------------------
 
-DOMAIN LAYER
-    core layer
-    no libraries/frameworks
-    needed objects/values to express domain
-    define interfaces provided by outer layerS
+This is a PHP console application that demonstrates the Hexagonal architecture.
 
-APPLICATION LAYER
-    classes to implement use cases
-    leverages domain layer
-
-INFRASTRUCTURE LAYER
-    implement interfaces in domain & app layer (persistance, notifications, blob  storage, etc.)
-
-CLIENT/FRAMEWORK LAYER
-    outermost layer
-    console worker app
-    user interacts with this layer
-    pulls uses case exposed by app layer
-
-
-USE CASES
+# ARCHITECTURE
 -------------------------------------------------------------------------------
-Weekly revenue report
 
-List showroom pets
+- PHP 7.0.33-0+deb9u3 (cli) (built: Mar  8 2019 10:01:24) ( NTS )
+- Debian operating system
+- Symfony, for PHP framework and testing framework
+- Composer, for PHP package management
 
-Friday notification
-    - list of pets going to vet
-    - list of customers to contact
-
-Occupancy report
-
-
-TESTING
+# DB schema
 -------------------------------------------------------------------------------
-https://getcomposer.org/download/
+
+This is a rough outline of what tables would be needed.
+
+Note: The schema is not normalized, for the sake of simplicity.
+
+```
+customer
+--------
+id
+name
+contact
+
+transactions
+------------
+id
+fk_customer_id            
+fk_inventory_id           
+type                    
+timestamp               
+amount                  
+insured                 
+insuranceLengthInDays  
+
+transaction_type
+----------------
+id
+type        // sale, return, reserve, pickup, chip
+
+pet-type
+--------
+id
+type        // cat, bird, dog, etc.
+
+inventory
+---------
+id
+fk_customer_id
+fk_pet_type
+isInsured                 
+returnDate      // NULL if never returned
+refundPercentGranted
+insuranceFeePaid
+saleDate
+returnedDate
+isReserved:Bool 
+customer-id
+chipId:String
+hasChip:Bool
+implantDate
+pet name
+DOB
+showroomDesc
+
+notifications
+-------------
+id
+msg    
+isRead 
+
+notification-schedule
+---------------------
+id
+last-notified-pets-going-to-vet
+```
+
+
+# TESTING
+-------------------------------------------------------------------------------
+
+
 
 # HOW TO BUILD
+-------------------------------------------------------------------------------
 
+Download project:
 
+https://github.com/paperduck/sn
+
+If you have PHP and Composer installed, you should be able to run it:
+
+https://symfony.com/doc/current/deployment.html
 
 # HOW TO USE
+-------------------------------------------------------------------------------
 
-List available commands (and other info):
+```
+$ cd hex_pet_shop
+$ php main.php
+```
 
-    $ cd hex_pet_shop
-    $ php main.php list
+You will be prompted for commands. You can type 'help' to see a list of
+options.
 
-Show "hello world":
+# REFERENCES
+-------------------------------------------------------------------------------
 
-    $ cd hex_pet_shop
-    $ php main.php revenue
+### URLs
+
+PHP flat file database to store data with JSON: 
+https://github.com/Greg0/Lazer-Database
+
+Epoch Converter: 
+https://www.epochconverter.com/
+
+
