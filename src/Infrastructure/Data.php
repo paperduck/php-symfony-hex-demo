@@ -5,6 +5,7 @@ define('LAZER_DATA_PATH', realpath(__DIR__).'/data/'); //Path to folder with tab
 
 use Lazer\Classes\Database as Lazer;
 use Domain\DataInterface;
+use Infrastructure\Fees;
 
 class Data implements DataInterface {
 
@@ -115,7 +116,7 @@ class Data implements DataInterface {
         $row->inventory_id    = 1;
         $row->t_type          = 'chip';
         $row->timestamp       = '1565361692';
-        $row->amount          = 200;
+        $row->amount          = Fees::$chip;
         $row->insured         = False;
         $row->insured_days     = 0;
         $row->save();

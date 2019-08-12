@@ -3,6 +3,7 @@ namespace Infrastructure;
 
 use Infrastructure\Data;
 use Application\ServicesInterface;
+use Infrastructure\BusinessCalendar;
 
 class Services implements ServicesInterface {
     // Implement use cases.
@@ -10,7 +11,7 @@ class Services implements ServicesInterface {
     public function reportRevenue() {
         Data::fixtures(); // Reset database. Delete as needed.
     
-        $start = strtotime("last friday midnight"); // most recent friday's midnight
+        $start = BusinessCalendar::getReportPeriodStart(); // most recent friday's midnight
         $gross = Data::getGrossRevenue($start);
         $expenses = Data::getExpenses($start);
         $frozen = Data::getFrozenMoney($start);
