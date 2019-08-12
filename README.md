@@ -12,11 +12,6 @@ This is a PHP console application that demonstrates the Hexagonal architecture.
 - Composer, for PHP package management
 
 
-# TESTING
--------------------------------------------------------------------------------
-
-
-
 # HOW TO BUILD
 -------------------------------------------------------------------------------
 
@@ -38,6 +33,16 @@ $ php main.php
 
 You will be prompted for commands. You can type 'help' to see a list of
 options.
+
+# TESTING
+-------------------------------------------------------------------------------
+
+Unit tests for revenue functions:
+
+tests/Infrastructure/ServicesTest.php
+
+phpunit-bridge failed to install correctly (screenshot below). You can still
+view the unit tests written.
 
 # REFERENCES
 -------------------------------------------------------------------------------
@@ -123,4 +128,4 @@ last-notified-pets-going-to-vet
 
 ![screenshot](hex_screenshot.png)
 
-
+![phpuniterror](phpunit_error.png)
