@@ -1,10 +1,9 @@
 # WHAT IS THIS?
--------------------------------------------------------------------------------
 
 This is a PHP console application that demonstrates the Hexagonal architecture.
 
+
 # TECHNICAL SPECIFICATIONS
--------------------------------------------------------------------------------
 
 - PHP 7.0.33-0+deb9u3 (cli) (built: Mar  8 2019 10:01:24) ( NTS )
 - Debian operating system
@@ -12,8 +11,8 @@ This is a PHP console application that demonstrates the Hexagonal architecture.
 - Composer, for PHP package management
 
 
+
 # HOW TO BUILD
--------------------------------------------------------------------------------
 
 Download project:
 
@@ -24,8 +23,8 @@ command line.
 
 https://symfony.com/doc/current/deployment.html
 
+
 # HOW TO USE
--------------------------------------------------------------------------------
 
 ```
 $ cd hex_pet_shop
@@ -35,8 +34,8 @@ $ php main.php
 You will be prompted for commands. You can type 'help' to see a list of
 options.
 
+
 # TESTING
--------------------------------------------------------------------------------
 
 Unit tests for revenue functions:
 
@@ -48,8 +47,8 @@ view the unit tests written.
 Other examples of test cases I have written are available:  
 https://github.com/paperduck/algo/tree/master/src/tests
 
+
 # REFERENCES
--------------------------------------------------------------------------------
 
 ### URLs
 
@@ -61,7 +60,6 @@ https://www.epochconverter.com/
 
 
 # DB schema
--------------------------------------------------------------------------------
 
 This is a rough outline of what tables would be needed.
 
