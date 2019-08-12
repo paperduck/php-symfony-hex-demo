@@ -19,7 +19,8 @@ Download project:
 
 https://github.com/paperduck/sn
 
-If you have PHP and Composer installed, you should be able to run it:
+If you have PHP and Composer installed, you should be able to run it on the
+command line.
 
 https://symfony.com/doc/current/deployment.html
 
@@ -39,10 +40,13 @@ options.
 
 Unit tests for revenue functions:
 
-tests/Infrastructure/ServicesTest.php
+`tests/Infrastructure/ServicesTest.php`
 
 phpunit-bridge failed to install correctly (screenshot below). You can still
 view the unit tests written.
+
+Other examples of test cases I have written are available:  
+https://github.com/paperduck/algo/tree/master/src/tests
 
 # REFERENCES
 -------------------------------------------------------------------------------
@@ -61,7 +65,10 @@ https://www.epochconverter.com/
 
 This is a rough outline of what tables would be needed.
 
-Note: The schema is not normalized, for the sake of simplicity.
+Note: The schema is not normalized, for the sake of simplicity. It would be
+nice to have a separate `pets` table to extract pet-unique fields out of the
+`inventory` table. A 1-to-1 relation would allow non-pet items to be kept
+in the `inventory` table.
 
 ```
 customer
@@ -124,8 +131,12 @@ last-notified-pets-going-to-vet
 ```
 
 
-# SCREENSHOT
+# SCREENSHOTS
+
+### Revenue Report
 
 ![screenshot](hex_screenshot.png)
+
+### phpunit setup difficulty
 
 ![phpuniterror](phpunit_error.png)
